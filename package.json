@@ -1,7 +1,9 @@
 {
 	"name": "nuxt-memory-game",
 	"scripts": {
-		"dev": "nuxt"
+		"dev": "nuxt",
+		"build": "nuxt build",
+    	"start": "nuxt start"
 	},
 	"dependencies": {
 		"lodash": "^4.17.15",
