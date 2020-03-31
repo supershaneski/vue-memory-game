@@ -11,6 +11,7 @@
 header {
   background-color: transparent;
   font-size: 0.9em;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

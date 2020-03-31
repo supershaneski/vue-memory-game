@@ -1,6 +1,5 @@
 <template>
   <main class="main">
-    <clock />
     <div class="game-container">
       <memory-game 
         ref="game" 
