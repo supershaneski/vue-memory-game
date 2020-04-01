@@ -1,14 +1,23 @@
 <template>
   <div>
-    <header>
-      <span><em>vue-memory-game</em></span>
-    </header>
+    <app-header text="memory-game" />
     <Nuxt />
   </div>
 </template>
 
+<script>
+import AppHeader from '../components/AppHeader.vue'
+export default {
+  name: "DefaultLayout",
+  components: {
+    AppHeader,
+  }
+}
+</script>
+
 <style scoped>
 header {
+  font-family: Verdana, "Arial Black",sans-serif;
   background-color: transparent;
   font-size: 0.9em;
   padding-bottom: 10px;

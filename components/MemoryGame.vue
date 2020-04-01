@@ -1,11 +1,11 @@
 <template>
     <div class="memory-game">
-        <transition-group name="cello" tag="div" class="container">
+        <transition-group name="deck" tag="div" class="container">
             <game-card 
                 @click="img => click(item.index, img)" 
                 :src="item.image" 
                 :ref="`card-${item.index}`" 
-                class="cello" 
+                class="deck" 
                 v-for="item in cardItems" 
                 :key="item.index"
             />
@@ -33,7 +33,6 @@ export default {
 
     data() {
         return {
-            //items: [],
             cardItems: [],
             selected: [],
             flag: false,
@@ -106,25 +105,7 @@ export default {
 
             this.selected = [];
         },
-
-        /*
-        shuffle: function() {
-            this.cardItems = _.shuffle(this.cardItems);
-        },
-
-        flipAll: function() {
-            for(var i = 0; i < 16; i++) {
-                this.$refs['card-'+i][0].flip(false)
-            }
-        },
         
-        showHide: function() {
-            for(var i = 0; i < 16; i++) {
-                this.$refs['card-'+i][0].showHide(true)
-            }
-        },
-        */
-
         reset: function() {
             this.cardItems = _.shuffle(this.cardItems);
             for(var i = 0; i < 16; i++) {
@@ -134,6 +115,8 @@ export default {
     },
 
     created() {
+        //fruits
+        /*
         const images = [
             "apple.jpg",
             "banana.jpg",
@@ -143,6 +126,17 @@ export default {
             "melon.jpg",
             "orange.jpg",
             "pears.jpg",
+        ]*/
+        // one piece
+        const images = [
+            "brook.jpg",
+            "chopper.jpg",
+            "luffy.jpg",
+            "nami.jpg",
+            "robin.jpg",
+            "sanji.jpg",
+            "ussop.jpg",
+            "zoro.jpg",
         ]
         for(var i = 0; i < 16; i++) {
             this.cardItems.push({
@@ -154,13 +148,8 @@ export default {
             })
         }
     },
-
-    mounted() {
-        console.log("mounted")
-    },
-
+    
     updated() {
-        console.log("updated")
         this.$emit('change','start')
         this.count = 0;
     }
@@ -185,7 +174,7 @@ export default {
     width: 220px;
 }
 
-.cello-move {
-    transition: transform 1s;
+.deck-move {
+    transition: transform .5s;
 }
 </style>

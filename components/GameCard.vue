@@ -4,15 +4,15 @@
             <transition name="rotate-hide">
                 <div v-if="show" class="cell">
                     
-                    <img v-if="src === 'apple.jpg'" class="front" src="/apple.jpg" />
-                    <img v-if="src === 'banana.jpg'" class="front" src="/banana.jpg" />
-                    <img v-if="src === 'coconut.jpg'" class="front" src="/coconut.jpg" />
-                    <img v-if="src === 'grapes.jpg'" class="front" src="/grapes.jpg" />
+                    <img v-if="src === 'brook.jpg'" class="front" src="/brook.jpg" />
+                    <img v-if="src === 'chopper.jpg'" class="front" src="/chopper.jpg" />
+                    <img v-if="src === 'luffy.jpg'" class="front" src="/luffy.jpg" />
+                    <img v-if="src === 'nami.jpg'" class="front" src="/nami.jpg" />
 
-                    <img v-if="src === 'guava.jpg'" class="front" src="/guava.jpg" />
-                    <img v-if="src === 'melon.jpg'" class="front" src="/melon.jpg" />
-                    <img v-if="src === 'orange.jpg'" class="front" src="/orange.jpg" />
-                    <img v-if="src === 'pears.jpg'" class="front" src="/pears.jpg" />
+                    <img v-if="src === 'robin.jpg'" class="front" src="/robin.jpg" />
+                    <img v-if="src === 'sanji.jpg'" class="front" src="/sanji.jpg" />
+                    <img v-if="src === 'ussop.jpg'" class="front" src="/ussop.jpg" />
+                    <img v-if="src === 'zoro.jpg'" class="front" src="/zoro.jpg" />
                     
                     <img class="back" src="/back.jpg" />
                 </div>
@@ -27,7 +27,7 @@ export default {
     props: {
         src: {
             type: String,
-            default: 'apple.jpg',
+            default: 'luffy.jpg',
         },
     },
 
@@ -35,7 +35,6 @@ export default {
         return {
             flipped: false,
             show: true,
-            frontImage: "/trump.jpg",
         }
     },
 
@@ -77,7 +76,7 @@ export default {
     width: 75px;
     height: 75px;
     transform: scale(1.0, 1.0) rotate(0deg);
-    transition: 1s;
+    transition: .5s;
     transform-style: preserve-3d;
 }
 
@@ -113,7 +112,7 @@ export default {
 }
 
 .rotate-hide-enter-active, .rotate-hide-leave-active {
-  transition: all .5s;
+  transition: all .3s;
 }
 
 .rotate-hide-enter, .rotate-hide-leave-to {
