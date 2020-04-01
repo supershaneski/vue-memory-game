@@ -41,6 +41,7 @@ export default {
     methods: {
 
         click: function() {
+            if(!this.show) return;
             this.$emit('click', this.src)
         },
 
