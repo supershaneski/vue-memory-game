@@ -6,7 +6,7 @@
     	"start": "nuxt start"
 	},
 	"dependencies": {
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.19",
 		"nuxt": "^2.12.1"
 	}
 }
